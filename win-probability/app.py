@@ -6,15 +6,14 @@ import matplotlib.pyplot as plt
 from matplotlib.collections import LineCollection
 
 # Page config
-st.set_page_config(page_title="Win Probability Visualizer", layout="wide")
+st.set_page_config(page_title="IPL Win Probability", layout="wide")
+
+# Load data
+with open("wp_pred_output.pkl", "rb") as file:
+        df_final = pickle.load(file)
 
 # Title
 st.title("IPL Win Probability")
-
-# Load data
-
-with open("wp_pred_output.pkl", "rb") as file:
-        df_final = pickle.load(file)
 
 # Match ID input
 match_id = st.number_input("Enter Match ID", min_value=0, step=1)
