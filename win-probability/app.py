@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from matplotlib.collections import LineCollection
 
 # Page config
-st.set_page_config(page_title="IPL Win Probability", layout="wide")
+st.set_page_config(page_title="IPL Win Probability", layout="centered")
 
 # Load data
 with open("win-probability/wp_pred_output.pkl", "rb") as file:
