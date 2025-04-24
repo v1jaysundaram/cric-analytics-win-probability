@@ -87,5 +87,5 @@ else:
     st.pyplot(fig)
 
 # Sidebar footer
-st.sidebar.write("Built by [Vijay](https://www.linkedin.com/in/vijay-sundaram/)", unsafe_allow_html=True
+st.sidebar.write("Built by [Vijay](https://www.linkedin.com/in/vijay-sundaram/)", unsafe_allow_html=True)
 
