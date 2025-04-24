@@ -23,9 +23,7 @@ st.info("Open the specific match on ESPNcricinfo and copy the long number at the
 match_df = df_final[df_final['p_match'] == match_id].copy()
 
 # Check if match data is available
-if match_df.empty:
-    st.warning("No data available for the selected match.")
-else:
+if match_id:
     # Adjust innings 2 x-axis
     end_innings_1 = match_df[match_df['inns'] == 1]['inns_balls'].max()
     match_df.loc[match_df['inns'] == 2, 'inns_balls'] += end_innings_1
@@ -84,6 +82,9 @@ else:
 
     # Display
     st.pyplot(fig)
+
+else:
+        st.warning("No data found for the entered Match ID.")
 
 # Sidebar footer
 st.sidebar.write("Built by [Vijay](https://www.linkedin.com/in/vijay-sundaram/)", unsafe_allow_html=True)
