@@ -12,7 +12,7 @@ st.set_page_config(page_title="Win Probability Visualizer", layout="wide")
 st.title("IPL Win Probability")
 
 # Load data
-@st.cache_data
+
 with open("wp_pred_output.pkl", "rb") as file:
         df_final = pickle.load(file)
 
