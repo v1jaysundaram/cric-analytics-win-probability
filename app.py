@@ -9,7 +9,7 @@ from matplotlib.collections import LineCollection
 st.set_page_config(page_title="IPL Win Probability", layout="centered")
 
 # Load data
-with open("win-probability/wp_pred_output.pkl", "rb") as file:
+with open("wp_pred_output.pkl", "rb") as file:
         df_final = pickle.load(file)
 
 # Title
